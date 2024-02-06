@@ -12,7 +12,7 @@ jobs:
         - run: echo "El repositorio ${{ github.repository }} ha sido clonado con éxito."
         - uses: php-actions/composer@v6
         - run: echo "Instaladas las dependencias de Composer"
-        - run: vendor/bin/phpunit tests/
+        - run: vendor/bin/phpunit test/
   cd:
     runs-on: ubuntu-latest
     needs: ci
