@@ -42,7 +42,11 @@ class EnanaTest extends TestCase {
     public function testHeridaGrave() {
         #Se probará el efecto de una herida grave a una Enana con una situación de viva.
         #Se tendrá que probar que la vida es 0 y además que su situación es limbo
-
+        $enana = new Enana("Alvaro",100);
+        $enana->heridaGrave();
+        $enana->setPuntosVida(0);
+        $this->assertEquals(0, $enana->getPuntosVida());
+        $this->assertEquals("limbo", $enana->getSituacion());
     }
     
     public function testPocimaRevive() {
